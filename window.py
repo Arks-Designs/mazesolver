@@ -1,5 +1,6 @@
 """Module to create a window for use"""
 from tkinter import Tk, BOTH, Canvas
+from geometry import Line
 
 class Window:
     def __init__(self, width, height):
@@ -31,3 +32,7 @@ class Window:
     def close(self)->None:
         """Sets running flag to false"""
         self.running = False
+
+    def draw_line(self, line:Line, fill_color:str)->None:
+        """Module to draw a line on a canvas"""
+        line.draw(self.__canvas, fill_color)
