@@ -40,6 +40,12 @@ class Maze:
             ) for j in range(self.num_rows)
         ] for i in range(self.num_cols)]
 
+        # Remove top of top left cell (starting point)
+        self._cells[0][0].has_top_wall = False
+
+        # Remove bottom of bottom right cell (end point)
+        self._cells[-1][-1].has_bottom_wall = False
+
     def _draw_cells(self)->None:
         """Draws the cells of the matrix"""
         for i in range(self.num_cols):
