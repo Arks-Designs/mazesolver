@@ -3,10 +3,10 @@ from maze import Maze
 from geometry import Point, Line, Cell
 
 def main():
-    win = Window(800,600)
+    win = Window(1500,900)
 
     #Test maze
-    m = Maze(200, 200, 5, 7, 50, 50, win)
+    m = Maze(10, 10, 15, 24, 50, 50, win)
     m._create_cells()
     m._draw_cells()
 
